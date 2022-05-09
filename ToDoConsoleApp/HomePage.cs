@@ -10,14 +10,14 @@ namespace ToDoConsoleApp
     {
         public static void Select()
         {
-            Console.WriteLine("  Lütfen yapmak istediğiniz işlemi seçiniz :) " +
+            Console.WriteLine("  Lütfen yapmak istediğiniz işlemi seçiniz " +
                                 "\n * ******************************************" +
                                 "\n(1) Board Listelemek" +
                                 "\n(2) Board'a Kart Eklemek" +
                                 "\n(3) Board'dan Kart Silmek" +
                                 "\n(4) Kart Taşımak");
             var secim = Console.ReadLine();
-            while (secim.ToLower() != "cikis")
+            while (secim.ToLower() != "")
             {
                 switch (secim)
                 {
@@ -25,19 +25,19 @@ namespace ToDoConsoleApp
                         BoardListelemek.Goster();
                         break;
                     case "2":
-                        Console.WriteLine("(2) Board'a Kart Eklemek");
+                        AddCard.NewCard();
                         break;
                     case "3":
-                        Console.WriteLine("(3) Board'dan Kart Silmek");
+                        DeleteCard.Deleting();
                         break;
                     case "4":
-                        Console.WriteLine("(4) Kart Taşımak");
+                        ChangeStatus.changing();
                         break;
                     default:
                         Console.WriteLine("Lütfen Geçerli bir Seçim yapınız");
                         break;
                 }
-                Console.WriteLine("Başka bir işlem yapabilir  veya 'cikis' yapabilirsiniz");
+                Console.WriteLine("Başka bir işlem yapabilir  veya cikis için ENTER basin");
                 secim = Console.ReadLine();
 
             };

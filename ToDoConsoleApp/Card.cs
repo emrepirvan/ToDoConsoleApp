@@ -13,13 +13,17 @@ namespace ToDoConsoleApp
         public string AtananKisi { get; set; }
         public string Buyukluk { get; set; }
         public string BulunduguLine { get; set; }
-        public Card(string baslik, string icerik, string atananKisi, string buyukluk, string bulunduguLine = "TODO")
+        public Card(string baslik, string icerik, string atananKisi, buyukluk bu, string bulunduguLine = "TODO")
         {
             Baslik = baslik;
             Icerik = icerik;
             AtananKisi = atananKisi;
-            Buyukluk = buyukluk;
+            Buyukluk = bu.ToString();
             BulunduguLine = bulunduguLine;
+        }
+        public enum buyukluk
+        {
+            XS =1,S,M,L,XL
         }
     }
 }
